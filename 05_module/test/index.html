@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program</title>
+
+    <script src="index.js"></script>
+</head>
+<body>
+    <button class="myButton">Увеличить счётчик</button>
+    <button class="decreasebutton">Уменьшить счётчик</button>
+    <p class="counter">Счётчик: 0</p>
+    <script>
+        let count = 0
+        const counterElement = document.querySelector('.counter');
+        const myButton = document.querySelector('.myButton');
+        const decreasebutton = document.querySelector('.decreasebutton');
+        function increaseCounter(){
+            count++
+            counterElement.textContent = "Счётчик: " + count
+        }
+        myButton.onclick = increaseCounter
+        function decreaseCounter(){
+            count -= 1
+            counterElement.textContent = `Счётчик: ${count}`
+        }
+        decreasebutton.onclick = decreaseCounter
+        
+    </script>
+</body>
+</html>
